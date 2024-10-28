@@ -23,8 +23,11 @@ const Navbar = () => {
     const NavItem = ({ item }: { item: NavItem }) => {
         return (
             <li key={item.name}>
-                <a href={item.href} className={`text-xl 
-            -tracking-[0.2] ${item.href === '/' ? 'font-bold text-[#3063E6] decoration-inherit underline underline-offset-4' : 'font-normal'}`}>
+                <a href={item.href} className={`md:text-xl text-xs 
+            -tracking-[0.2] 
+            ${item.href === '/' ?
+                        'font-bold text-[#3063E6] decoration-inherit underline underline-offset-4'
+                        : 'font-normal'}`}>
                     {item.name}
                 </a>
             </li>
@@ -45,7 +48,7 @@ const Navbar = () => {
                                 <SearchInput searchValue={searchValue} setSearchValue={setSearchValue} />
                             ) : navItems.map((item) =>
                             (
-                                <NavItem item={item} />
+                                <NavItem key={item.name} item={item} />
                             ))
                         }
                     </ul>
