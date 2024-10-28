@@ -1,7 +1,4 @@
-export interface NavItem {
-    name: string;
-    href: string;
-}
+import NavItem from "@/types/NavItem";
 
 const navItems: NavItem[] = [
     {
