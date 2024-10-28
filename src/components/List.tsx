@@ -15,7 +15,7 @@ const List = ({ users }: ListProps) => {
         return (
             <div className="container mx-auto w-1/2">
                 <div className="flex justify-center items-center mt-20">
-                    <img className='w-fit' src={NOFILEFOUND} alt="No file found" />
+                    <img className='w-fit' src={NOFILEFOUND} alt="No file found" loading='lazy' />
                 </div>
             </div>
         )
@@ -30,10 +30,10 @@ const List = ({ users }: ListProps) => {
                             key={user.first_name + user.contact_number}
                             className="flex flex-col justify-center p-6 bg-white rounded-xl border border-[#D7D7EA] gap-2">
                             <img className='h-20 w-h-20 rounded-full self-start border border-[#F3F3F3] p-2'
-                                src={PROFILEPIC} alt="Profile Picture" />
+                                src={PROFILEPIC} alt="Profile Picture" loading='lazy' />
                             <p className="text-3xl font-semibold">{user.first_name + " " + user.last_name}</p>
                             <div className="flex items-center gap-2 mb-2">
-                                <img src={LOCATION} alt="location" />
+                                <img src={LOCATION} alt="location" loading='lazy' />
                                 <p className="text-xs text-[#425763] font-medium">{user.city}</p>
                             </div>
 
@@ -42,7 +42,7 @@ const List = ({ users }: ListProps) => {
                             <div className="flex justify-between items-center mt-2">
                                 <div className="">
                                     <div className="flex items-center gap-2">
-                                        <img src={PHONE} alt="location" />
+                                        <img src={PHONE} alt="location" loading='lazy' />
                                         <p className="text-sm font-semibold">{user.contact_number}</p>
                                     </div>
                                     <p className="text-xs text-[#AFAFAF] font-medium">Available on phone</p>
@@ -58,7 +58,7 @@ const List = ({ users }: ListProps) => {
 
                                         <p className='mt-4'>Profile picture:</p>
                                     </div>
-                                    <img className='max-w-full'
+                                    <img className='max-w-full' loading='lazy'
                                         src={MODALPROFILEPIC} alt="Profile Picture" />
                                 </Modal>
                             </div>
