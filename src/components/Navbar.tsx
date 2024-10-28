@@ -12,6 +12,14 @@ const Navbar = () => {
     const { searchValue, setSearchValue } = useContext(SearchContext)
     const isSearchPage = location.pathname === '/search'
 
+    /*************  ✨ Codeium Command ⭐  *************/
+    /**
+     * Renders a single navigation item as a list element.
+     * 
+     * @param {{ item: NavItem }} props The item to render.
+     * @returns {JSX.Element} The rendered list item.
+     */
+    /******  143aba23-c0b2-4f69-b512-4d65d08e6c64  *******/
     const NavItem = ({ item }: { item: NavItem }) => {
         return (
             <li key={item.name}>
@@ -24,13 +32,14 @@ const Navbar = () => {
     }
 
     return (
-        <nav className="max-w-full mx-auto py-6 shadow-lg">
-            <div className="container mx-auto px-8">
-                <div className="flex justify-between items-center">
+        <nav className="max-w-full mx-auto md:py-6 py-4 shadow-lg">
+            <div className="container mx-auto px-4 lg:w-3/4 w-full overflow-hidden">
+                <div className="flex justify-between items-center max-sm:flex-col max-sm:items-start">
                     <Link to="/" onClick={() => setSearchValue('')}>
-                        <img height={62} width={220} src={LOGO} alt="Logo" />
+                        <img className='md:max-w-[220px] sm:max-w-[150px] max-w-[120px]'
+                            src={LOGO} alt="Logo" />
                     </Link>
-                    <ul className="flex space-x-4">
+                    <ul className="space-x-4 flex max-sm:mt-2">
                         {
                             isSearchPage ? (
                                 <SearchInput searchValue={searchValue} setSearchValue={setSearchValue} />
