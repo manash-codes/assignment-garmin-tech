@@ -1,4 +1,4 @@
-import BrandName from '@/assets/BrandName.svg'
+import BrandName from '@/assets/brandName.svg'
 import LOGO from '@/assets/Logo.svg'
 import './App.css'
 import Navbar from './components/Navbar'
