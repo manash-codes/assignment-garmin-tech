@@ -26,7 +26,7 @@ const SearchInput = ({ searchValue, setSearchValue }: SearchInputProps) => {
                 value={searchValue}
                 onKeyDown={handleSearchSubmit}
                 onChange={(e) => setSearchValue(e.target.value)}
-                placeholder="Search" />
+                placeholder="Type and click enter to search" />
             <div className="absolute left-3 top-1/2 -translate-y-1/2">
                 <img src={GLASS} alt="Glass" />
             </div>

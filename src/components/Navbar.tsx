@@ -27,7 +27,7 @@ const Navbar = () => {
         <nav className="max-w-full mx-auto py-6 shadow-lg">
             <div className="container mx-auto px-8">
                 <div className="flex justify-between items-center">
-                    <Link to="/">
+                    <Link to="/" onClick={() => setSearchValue('')}>
                         <img height={62} width={220} src={LOGO} alt="Logo" />
                     </Link>
                     <ul className="flex space-x-4">
