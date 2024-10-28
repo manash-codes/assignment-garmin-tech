@@ -3,6 +3,7 @@ import PROFILEPIC from '@/assets/profilePic.png';
 import LOCATION from '@/assets/location.svg';
 import PHONE from '@/assets/phone.svg';
 import MODALPROFILEPIC from '@/assets/modalProfile.png';
+import NOFILEFOUND from '@/assets/noFileFound.png';
 import Modal from './Modal';
 
 interface ListProps {
@@ -10,11 +11,12 @@ interface ListProps {
 }
 
 const List = ({ users }: ListProps) => {
-
-    if (users === null) {
+    if (users?.length === 0) {
         return (
             <div className="container mx-auto w-1/2">
-                <p>No users found</p>
+                <div className="flex justify-center items-center mt-20">
+                    <img className='w-fit' src={NOFILEFOUND} alt="No file found" />
+                </div>
             </div>
         )
     }
