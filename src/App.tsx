@@ -1,5 +1,5 @@
-import BrandName from '@/assets/brandName.svg'
-import LOGO from '@/assets/Logo.svg'
+import BRANDNAME from '@/assets/brandName.svg'
+import LOGO from '@/assets/logo.svg'
 import './App.css'
 import Navbar from './components/Navbar'
 import SearchInput from '@/components/SearchInput'
@@ -16,7 +16,7 @@ function App() {
         <div className="flex flex-col items-center justify-center mt-36">
           <div className="flex flex-none gap-x-6 mb-20">
             <img className='w-full' src={LOGO} alt="Logo" />
-            <img className='w-full' src={BrandName} alt="Brand name" />
+            <img className='w-full' src={BRANDNAME} alt="Brand name" />
           </div>
           <SearchInput searchValue={searchValue} setSearchValue={setSearchValue} />
         </div>

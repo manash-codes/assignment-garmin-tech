@@ -1,4 +1,4 @@
-import Glass from '@/assets/glass.svg';
+import GLASS from '@/assets/glass.svg';
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Input } from './ui/input';
@@ -28,7 +28,7 @@ const SearchInput = ({ searchValue, setSearchValue }: SearchInputProps) => {
                 onChange={(e) => setSearchValue(e.target.value)}
                 placeholder="Search" />
             <div className="absolute left-3 top-1/2 -translate-y-1/2">
-                <img src={Glass} alt="Glass" />
+                <img src={GLASS} alt="Glass" />
             </div>
         </div>
     )
