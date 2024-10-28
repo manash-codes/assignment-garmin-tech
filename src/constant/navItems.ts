@@ -11,7 +11,7 @@ const navItems: NavItem[] = [
     },
     {
         name: "LINKEDIN",
-        href: "/contact",
+        href: "https://www.linkedin.com/company/girmantech/",
     },
     {
         name: "CONTACT",
